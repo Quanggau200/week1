@@ -1,0 +1,261 @@
+@media screen and (max-width: 900px) {
+  .title_text {
+    width: 100%;
+    align-items: center;
+  }
+  .title_text h1 {
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.6px;
+  }
+  .title_text p {
+    font-size: 17px;
+    line-height: 27px;
+    letter-spacing: 0.6px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .text_label {
+    font-size: 12px !important;
+    line-height: 20px;
+    letter-spacing: 2px;
+  }
+  .section_text {
+    width: 100%;
+  }
+  .section_text h3,
+  .text_sale h3,
+  .text_intro h3,
+  .text_footer h3,
+  .text_slider h3 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .section_text p {
+    font-size: 14px;
+  }
+  .content_title,
+  .order_title {
+    font-size: 17px;
+    line-height: 27px;
+  }
+  .content_description {
+    font-size: 14px;
+  }
+  .img_content {
+    max-width: 40px;
+    max-height: 40px;
+  }
+  .img_content svg {
+    width: 40px;
+    height: 40px;
+  }
+  .card_design {
+    flex-direction: column-reverse;
+  }
+  .card_image img {
+    width: 100%;
+  }
+  .card .card_design:nth-child(2),
+  .card .card_design:nth-child(4) {
+    flex-direction: column-reverse;
+  }
+  .text_sale p {
+    font-size: 14px;
+    text-align: center;
+  }
+  .img_product {
+    position: unset;
+    width: 100%;
+  }
+  .infor_product {
+    width: 100%;
+    gap: 2vmax;
+  }
+  .name_product {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: start;
+  }
+  .price {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .point p {
+    line-height: 20px;
+    font-size: 12px;
+  }
+  .product_set {
+    flex-direction: column;
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 1vmax;
+  }
+  .wrapper_button {
+    flex-direction: column;
+  }
+  .name_color span {
+    line-height: 24px;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .name_color span:nth-child(2) {
+    font-weight: 400;
+  }
+  .low_stock {
+    margin: 0;
+  }
+  .lable_stock {
+    font-size: 14px;
+  }
+  .quantity {
+    font-size: 13px;
+  }
+  .add {
+    line-height: 20px;
+  }
+  .text_order span {
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .more_order {
+    font-size: 14px;
+  }
+  .notice_sale {
+    padding: 2vmax;
+  }
+  .text_notice {
+    display: flex;
+    flex-direction: column;
+    gap: 1vmax;
+  }
+  .content_discount span {
+    line-height: 24px;
+  }
+  .text_intro {
+    width: 100%;
+  }
+  .text_intro p {
+    font-size: 14px;
+  }
+  .infor_detail a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .content_comment {
+    margin: 0;
+  }
+  .comment_text .name_product {
+    text-align: center;
+    font-size: 20px;
+  }
+  .actor span {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .qa {
+    flex-direction: column;
+    gap: 2vmax;
+  }
+  .order_infor .content_description {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .text_footer {
+    width: 100%;
+  }
+  .text_footer span {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .btn_item_card {
+    padding: 13px 10px;
+  }
+  .btn_item_card span {
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .width_page {
+    padding: 0 15px;
+  }
+  .slider_content,
+  .order_content {
+    overflow-x: scroll;
+  }
+  .content {
+    min-width: 97%;
+  }
+  .order_infor {
+    min-width: 75%;
+  }
+  .item {
+    min-width: 60px;
+  }
+  .number {
+    font-size: 33px;
+    line-height: 38px;
+  }
+  .countdown_label {
+    font-size: 12px !important;
+    line-height: 20px !important;
+  }
+  .countdown_spacer {
+    font-size: 28px;
+  }
+  .number {
+    line-height: 30px;
+    font-size: 28px;
+  }
+  .time {
+    min-width: 78px;
+  }
+  .orther_img {
+    display: none;
+  }
+  .item_detail {
+    min-width: 50%;
+  }
+  .seen_item {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .content_text {
+    flex-direction: unset;
+    overflow-x: scroll;
+  }
+  .row_slider {
+    min-width: 100%;
+  }
+  .content_wrapper_mobile {
+    display: block;
+    padding: 3vmax 0;
+  }
+  .row_slider {
+    display: flex;
+    gap: 2vmax;
+    flex-direction: column-reverse;
+            height: fit-content;
+  }
+  .img_item {
+    position: unset;
+  }
+  .slider_wrapper {
+    display: none;
+  }
+}
+@media screen and (max-width:350px)
+{
+    .time
+    {
+        padding: 5px;
+        min-width: 58px;
+    }
+    .countdown_spacer
+    {
+        margin: 0 5px;
+    }
+}

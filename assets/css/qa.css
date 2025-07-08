@@ -1,0 +1,128 @@
+.qa {
+  display: flex;
+  gap: 6vmax;
+  padding: 3vmax 0;
+}
+.qa_text {
+  flex: 3;
+  display: flex;
+  gap: 1vmax;
+  flex-direction: column;
+}
+.qa_text h3 {
+  text-align: start;
+}
+.qa_text p {
+  color: var(--beae-global-colors-text_600);
+}
+.qa_select {
+  flex: 5.5;
+}
+.plus {
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.qa_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--beae-global-colors-text_200)
+}
+.qa_item .content_description {
+  font-weight: 700;
+}
+.icon_order {
+  max-width: 40px;
+  max-height: 40px;
+}
+.icon_order svg {
+  width: 40px;
+  height: 40px;
+}
+.order .order_infor {
+  gap: 1vmax;
+  flex: 1;
+}
+.order_title {
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--beae-global-colors-text_600);
+  text-transform: none;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+.order_content {
+  gap: 2vmax;
+  padding-top: 3vmax;
+  padding-bottom: 6vmax;
+}
+.text_footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1vmax;
+  padding: 0 30px;
+  padding-top: 6vmax;
+  padding-bottom: 6vmax;
+  width: 40%;
+}
+.text_footer span {
+  font-weight: 400;
+  color: var(--bs-white);
+}
+.text_footer h3 {
+  text-align: start;
+  color: var(--bs-white);
+}
+.content_footer {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+.content_footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://upload.beae.com/tasks/68102ca7b47b8feb58225755/images/banner_newsletter.jpg?v=1745899757589")
+    center / cover no-repeat;
+
+  z-index: -1;
+}
+.img_footer {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+}
+.text_footer .content_description {
+  color: var(--bs-white);
+}
+.text_footer .content_input {
+  padding: 13px 20px;
+  margin-right: 20px;
+  border-radius: 99px;
+  width: 100%;
+}
+.email {
+  display: flex;
+}
+.email .btn_explore {
+  margin-top: 0;
+}
+footer
+{
+    width: 100vw;
+    background:var(--beae-global-colors-text_600);
+    height: 15px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+
+

@@ -1,0 +1,465 @@
+@import url("banner.css");
+@import url("qa.css");
+@import url("responsive.css");
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a,
+input,
+button,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  color: black;
+  vertical-align: middle;
+  box-sizing: border-box;
+  list-style: none;
+}
+body,
+html {
+  font-family:'Urbanist', sans-serif;
+}
+img
+{
+    max-width: 100%;
+    object-fit: cover;
+}
+svg
+
+{
+    width: 16px;
+    height: 16px;
+}
+
+:root {
+  --items-per: 1;
+  --items-per-mobile: 1;
+  --items-gap: 0px;
+  --purple: rgb(82, 20, 142);
+  --red: #ee4b5a;
+  --blue: #16ace3;
+  --green: rgb(16, 145, 33);
+  --yellow: rgb(255, 190, 39);
+  --orange: #ff7e00;
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #adb5bd;
+  --bs-gray-600: #6c757d;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #343a40;
+  --bs-gray-900: #212529;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --color--header: #899296;
+  --color--dateoffuse: #757575;
+  --color--button: #44bd32;
+  --color--count: #d6001c;
+  --color--voucher: #0097e6;
+  --color--under--selected: #3aa12a;
+  --color--under-item: #d9d9d9;
+  --color--under-footer: #687481;
+  --color--price: #da4f25;
+  --color-infor-voucher: #212121;
+  --color--item--sale: #3d3f40;
+  --color--item--bought: #004c73;
+  --color--footer--main: #dce3ec;
+  --bs-primary-rgb: 13, 110, 253;
+  --bs-secondary-rgb: 108, 117, 125;
+  --bs-success-rgb: 25, 135, 84;
+  --bs-info-rgb: 13, 202, 240;
+  --bs-warning-rgb: 255, 193, 7;
+  --bs-danger-rgb: 220, 53, 69;
+  --bs-light-rgb: 248, 249, 250;
+  --bs-dark-rgb: 33, 37, 41;
+  --bs-white-rgb: 255, 255, 255;
+  --bs-black-rgb: 0, 0, 0;
+  --bs-body-color-rgb: 33, 37, 41;
+  --bs-body-bg-rgb: 255, 255, 255;
+      --beae-global-colors-white: white;
+    --beae-global-colors-black: black;
+    --beae-global-colors-transparent: transparent;
+    --beae-global-colors-white: white;
+    --beae-global-colors-black: black;
+    --beae-global-colors-transparent: transparent;
+    --beae-global-colors-beae-c8sq: #0dff00;
+    --beae-global-colors-primary_600:#ffc356;
+    --beae-global-colors-beae-zeel: #f21313;
+    --beae-global-colors-primary_100:#fff9ed;
+    --beae-global-colors-beae-ob6h: #fbff00;
+    --beae-global-colors-primary_900: #ef9a00;
+        --beae-global-colors-text_500: #5c5c5c;
+          --beae-global-colors-text_50: #e6e6e6;
+        --beae-global-colors-background_950: #c7c7c7;
+    --beae-global-colors-beae-rx7k: #00fff2;
+        --beae-global-colors-text_600: #171717;
+    --beae-global-colors-beae-b0mt: #964e4e;
+    --beae-global-colors-beae-ydb7: rgba(140, 63, 63, 0.72);
+    --beae-global-colors-beae-xzdn: #6e4f4f;
+    --beae-global-colors-beae-cjy1: #750606;
+    --beae-global-colors-beae-ahdv: #592a2a;
+    --beae-global-colors-beae-wive: #240101;
+    --beae-global-colors-beae-ny29: #a11313;
+    --beae-global-colors-beae-dtcm: #ad2b2b;
+    --beae-global-colors-beae-pyuk: #420606;
+    --beae-global-colors-beae-3bju: #240404;
+    --beae-global-colors-beae-qmmj: #140101;
+    --beae-global-colors-beae-clsm: #6e1313;
+    --beae-global-colors-beae-vcwz: #0d0303;
+        --beae-global-colors-text_50: #e6e6e6;
+    --beae-global-colors-beae-55fa: #dbdb12;
+    --beae-global-colors-beae-mxgp: #de1212;
+    --beae-global-colors-beae-co3b: #88ff00;
+    --beae-global-colors-beae-m65f: #210202;
+    --beae-global-colors-beae-a1jp: #8f0e0e;
+    --beae-global-colors-beae-819b: #e03a3a;
+    --beae-global-colors-beae-rcdc: #c800ff;
+    --beae-global-colors-text_200: #cfcfcf;
+    --beae-global-colors-beae-95pf: rgba(0, 255, 242, 0.33);
+    --be-h1-fs: 60px;
+    --be-h1-lh: 78px;
+    --be-h1-c: var(--beae-global-colors-text_900);
+    --be-h1-fs-M: 36px;
+    --be-h1-lh-M: 46px;
+    --be-h1-ls: 0.6px;
+    --be-h1-tt: none;
+    --be-h1-fw: 700;
+    --be-h1-ls-M: 0.6px;
+    --be-h1-fst: normal;
+    --be-h1-td: none;
+    --be-h1-ff: 'Urbanist', sans-serif;
+    --be-h1-fw-M: 700;
+    --be-h1-c-M: var(--beae-global-colors-text_600);
+    --be-h2-fs: 40px;
+    --be-h2-lh: 52px;
+    --be-h2-c: var(--beae-global-colors-text_600);
+    --be-h2-fs-M: 28px;
+    --be-h2-lh-M: 36px;
+    --be-h2-tt: none;
+    --be-h2-fw: 700;
+    --be-h2-ls: 0.6px;
+    --be-h2-ls-M: 0.6px;
+    --be-h2-fst: normal;
+    --be-h2-td: none;
+    --be-h2-ff: 'Urbanist', sans-serif;
+    --be-h2-fw-M: 700;
+    --be-h2-c-M: var(--beae-global-colors-text_600);
+    --be-h3-fs: 28px;
+    --be-h3-lh: 38px;
+    --be-h3-fs-M: 20px;
+    --be-h3-lh-M: 30px;
+    --be-h3-c: var(--beae-global-colors-text_600);
+    --be-h3-tt: none;
+    --be-h3-fw: 700;
+    --be-h3-ls: 0.6px;
+    --be-h3-ls-M: 0.6px;
+    --be-h3-fst: normal;
+    --be-h3-td: none;
+    --be-h3-ff: 'Urbanist', sans-serif;
+    --be-h3-fw-M: 700;
+        --be-h4-c: var(--beae-global-colors-text_600);
+    --be-h3-c-M: var(--beae-global-colors-text_600);
+    --be-h4-fs: 22px;
+    --be-h4-lh: 32px;
+    --be-h4-fs-M: 17.6px;
+    --be-h4-lh-M: 26px;
+    --be-h4-c: var(--beae-global-colors-text_600);
+    --be-h4-tt: none;
+    --be-h4-ls: 0.6px;
+    --be-h4-fw: 700;
+    --be-h4-ls-M: 0.6px;
+    --be-h4-fst: normal;
+    --be-h4-td: none;
+    --be-h4-ff: 'Urbanist', sans-serif;
+    --be-h4-fw-M: 700;
+    --be-h4-c-M: var(--beae-global-colors-text_600);
+    --be-h5-fs: 16px;
+    --be-h5-lh: 28px;
+    --be-h5-fs-M: 18px;
+    --be-h5-lh-M: 28px;
+    --be-h5-c: var(--beae-global-colors-text_600);
+    --be-h5-tt: none;
+    --be-h5-fw: 700;
+    --be-h5-ls: 0.6px;
+    --be-h5-ls-M: 0.6px;
+    --be-h5-fst: normal;
+    --be-h5-td: none;
+    --be-h5-ff: 'Urbanist', sans-serif;
+    --be-h5-fw-M: 700;
+    --be-h5-c-M: var(--beae-global-colors-text_600);
+    --be-h6-fs: 16px;
+    --be-h6-lh: 26px;
+    --be-h6-fs-M: 16px;
+    --be-h6-lh-M: 26px;
+    --be-h6-c: var(--beae-global-colors-text_600);
+    --be-h6-fw: 700;
+    --be-h6-tt: none;
+    --be-h6-ls: 0.6px;
+    --be-h6-ls-M: 0.6px;
+    --be-h6-fst: normal;
+    --be-h6-td: none;
+    --be-h6-ff: 'Urbanist', sans-serif;
+    --be-h6-fw-M: 700;
+    --be-h6-c-M: var(--beae-global-colors-text_600);
+    --be-p1-fs: 18px;
+    --be-p1-lh: 28px;
+    --be-p1-fs-M: 17px;
+    --be-p1-lh-M: 27px;
+    --be-p1-c: var(--beae-global-colors-text_600);
+    --be-p1-tt: none;
+    --be-p1-fw: 400;
+    --be-p1-ls-M: 0.6px;
+    --be-p1-ls: 0.6px;
+    --be-p1-fst: normal;
+    --be-p1-td: none;
+    --be-p1-ff: 'Urbanist', sans-serif;
+    --be-p1-fw-M: 400;
+    --be-p1-c-M: var(--beae-global-colors-text_600);
+    --be-p1-ta: left;
+    --be-p2-lh: 24px;
+    --be-p2-lh-M: 24px;
+    --be-p2-fs: 16px;
+    --be-p2-fs-M: 14px;
+    --be-p2-c: var(--beae-global-colors-text_600);
+    --be-p2-fw: 400;
+    --be-p2-ls-M: 0.6px;
+    --be-p2-ls: 0.6px;
+    --be-p2-tt: none;
+    --be-p2-fst: normal;
+    --be-p2-td: none;
+    --be-p2-ff: 'Urbanist', sans-serif;
+    --be-p2-fw-M: 400;
+    --be-p2-c-M: var(--beae-global-colors-text_600);
+    --be-p2-ta: left;
+    --be-p3-fs: 14px;
+    --be-p3-lh: 24px;
+    --be-p3-fs-M: 12px;
+    --be-p3-lh-M: 20px;
+    --be-p3-c: var(--beae-global-colors-text_600);
+    --be-p3-fw: 400;
+    --be-p3-ls-M: 0.6px;
+    --be-p3-ls: 0.6px;
+    --be-p3-tt: none;
+    --be-p3-fst: normal;
+    --be-p3-td: none;
+    --be-p3-ff: 'Urbanist', sans-serif;
+    --be-p3-fw-M: 400;
+    --be-p3-c-M: var(--beae-global-colors-text_600);
+    --be-p3-ta: left;
+    --be-btn-pr-fs: 14px;
+    --be-btn-pr-lh: 24px;
+    --be-btn-pr-ls: 0.6px;
+    --be-btn-pr-tt: capitalize;
+    --be-btn-pr-fw: 600;
+    --be-btn-pr-fst: normal;
+    --be-btn-pr-td: none;
+    --be-btn-pr-ff: 'Urbanist', sans-serif;
+    --be-btn-pr-c: var(--beae-global-colors-text_900);
+    --be-btn-pr-b: var(--beae-global-colors-primary_600);
+    --be-btn-pr-bst: solid;
+    --be-btn-pr-bc: var(--beae-global-colors-black);
+    --be-btn-pr-bw: 0px;
+    --be-btn-pr-br: 99px;
+    --be-btn-pr-pl: 50px;
+    --be-btn-pr-pr: 50px;
+    --be-btn-pr-pt: 13px;
+    --be-btn-pr-pb: 13px;
+    --be-btn-pr-cH: var(--beae-global-colors-text_900);
+    --be-btn-pr-bH: var(--beae-global-colors-primary_500);
+    --be-btn-pr-bsH: 0px 0px 0px 0px black;
+    --be-btn-pr-bstH: solid;
+    --be-btn-pr-bcH: #000000;
+    --be-btn-pr-bwH: 0px;
+    --be-btn-pr-brH: 99px;
+    --be-btn-pr-fs-M: 14px !important;
+    --be-btn-pr-lh-M: 20px !important;
+    --be-btn-pr-ls-M: 0.6px !important;
+    --be-btn-pr-fw-M: 600 !important;
+    --be-btn-se-c: var(--beae-global-colors-white);
+    --be-btn-se-fs: 14px;
+    --be-btn-se-lh: 24px;
+    --be-btn-se-ls: 0.6px;
+    --be-btn-se-tt: capitalize;
+    --be-btn-se-fw: 600;
+    --be-btn-se-fst: normal;
+    --be-btn-se-td: none;
+    --be-btn-se-ff: 'Urbanist', sans-serif;
+    --be-btn-se-b: var(--beae-global-colors-secondary_900);
+    --be-btn-se-bst: solid;
+    --be-btn-se-bc: var(--beae-global-colors-white);
+    --be-btn-se-bw: 0px;
+    --be-btn-se-br: 99px;
+    --be-btn-se-pr: 50px;
+    --be-btn-se-pb: 13px;
+    --be-btn-se-pl: 50px;
+    --be-btn-se-pt: 13px;
+    --be-btn-se-cH: var(--beae-global-colors-white);
+    --be-btn-se-bH: var(--beae-global-colors-secondary_700);
+    --be-btn-se-bstH: solid;
+    --be-btn-se-bcH: var(--beae-global-colors-white);
+    --be-btn-se-bwH: 0px;
+    --be-btn-se-brH: 99px;
+    --be-btn-se-bsH: 0px 0px 0px 0px black;
+    --be-btn-se-fs-M: 14px !important;
+    --be-btn-se-lh-M: 20px !important;
+    --be-btn-se-ls-M: 0.6px !important;
+    --be-btn-se-fw-M: 600 !important;
+    --be-btn-te-fs: 14px;
+    --be-btn-te-lh: 24px;
+    --be-btn-te-tt: capitalize;
+    --be-btn-te-fw: 600;
+    --be-btn-te-ls: 0.6px;
+    --be-btn-te-fst: normal;
+    --be-btn-te-td: underline;
+    --be-btn-te-ff: 'Urbanist', sans-serif;
+    --be-btn-te-c: var(--beae-global-colors-black);
+    --be-btn-te-bst: solid;
+    --be-btn-te-bc: #000000;
+    --be-btn-te-bw: 0px;
+    --be-btn-te-b: var(--beae-global-colors-transparent);
+    --be-btn-te-br: 0px;
+    --be-btn-te-pl: 0px;
+    --be-btn-te-pr: 0px;
+    --be-btn-te-pt: 0px;
+    --be-btn-te-pb: 0px;
+    --be-btn-te-cH: var(--beae-global-colors-primary_900);
+    --be-btn-te-bstH: solid;
+    --be-btn-te-bcH: #000000;
+    --be-btn-te-bwH: 0px;
+    --be-btn-te-brH: 0px;
+    --be-btn-te-fs-M: 14px !important;
+    --be-btn-te-lh-M: 20px !important;
+    --be-btn-te-fw-M: 600 !important;
+    --be-btn-te-ls-M: 0.6px !important;
+    --border--layout:#8a8a8a;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(
+    180deg,
+    hsla(0, 0%, 100%, 0.15),
+    hsla(0, 0%, 100%, 0)
+  );
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #212529;
+  --text--radio:2;
+  --height-header-main: 60px;
+  --padding--headding: 14px;
+  --padding--fl:10px;
+  --padding--common: 12px;
+  --margin--headding: 14px;
+  --margin--common: 12px;
+
+}

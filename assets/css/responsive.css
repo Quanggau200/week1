@@ -187,6 +187,10 @@
   .order_content {
     overflow-x: scroll;
   }
+      .slider_content
+      {
+        justify-content: unset;
+      }
   .content {
     min-width: 97%;
   }

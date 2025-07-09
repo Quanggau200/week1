@@ -23,6 +23,10 @@
   .section_text {
     width: 100%;
   }
+  .card .card_design:nth-child(2) .card_text, .card .card_design:nth-child(4) .card_text 
+  {
+    padding: 0;
+  }
   .section_text h3,
   .text_sale h3,
   .text_intro h3,
@@ -251,7 +255,7 @@
     display: none;
   }
 }
-@media screen and (max-width:350px)
+@media screen and (max-width:400px)
 {
     .time
     {

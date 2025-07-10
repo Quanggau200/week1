@@ -1,5 +1,6 @@
 @import url("banner.css");
 @import url("qa.css");
+@import url("active.css");
 @import url("responsive.css");
 *
 {
@@ -102,6 +103,10 @@ video {
   box-sizing: border-box;
   list-style: none;
 }
+button
+{
+  cursor: pointer;
+}
 body,
 html {
   font-family:'Urbanist', sans-serif;
@@ -183,6 +188,12 @@ svg
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
+  --beae-color-variant: #cfcfcf;
+      --beae-color-variant--yellow: #edcc0e;
+          --beae-color-variant--four: #b4dded;
+              --beae-color-variant--five: #CE9BA4;
+                  --beae-color-variant--six: #61b884;
+                  --beae-color-variant--seven: #61b884;
       --beae-global-colors-white: white;
     --beae-global-colors-black: black;
     --beae-global-colors-transparent: transparent;

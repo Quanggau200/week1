@@ -1,3 +1,4 @@
+
 @media screen and (max-width: 900px) {
   .title_text {
     width: 100%;
@@ -70,7 +71,7 @@
   }
   .img_product {
     position: unset;
-    width: 100%;
+    width: 100%;  
   }
   .infor_product {
     width: 100%;
@@ -184,8 +185,21 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .product_set .dot_pagination {
+    display: block;
+  }
   .width_page {
     padding: 0 15px;
+  }
+  .dot_scroll
+  {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .img_product
+  {
+    flex-direction: column;
+    gap: 19px;
   }
   .slider_content,
   .order_content {

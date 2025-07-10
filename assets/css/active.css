@@ -1,0 +1,43 @@
+.active
+{
+  width: 8px;
+  height: 32px;
+  background: black;
+}
+.active_dot
+{
+    width: 32px;
+    background:black;
+}
+.out_stock
+{
+  width: 0%;
+}
+.active_color
+{
+    box-shadow: 0px 0px 0px 2px black !important;
+}
+.active_color_item
+{
+    box-shadow: 0 0 0 1px black !important  ;
+    border-radius: 40px;
+}
+.active_text
+{
+    display: block;
+}
+.active_button
+{
+    background: var(--be-btn-pr-b);
+}
+.active_img
+{
+    border: 2px solid black;
+}
+.active_display
+{
+    transform: scale(1) translate(0, 0);
+  opacity: 1;
+  pointer-events: auto;
+    
+}

@@ -1,3 +1,17 @@
+//define
+const mainImgContainer = document.querySelector(".main_img");
+const mainImgs = document.querySelectorAll(".main_img_orther");
+const btnSilders = document.querySelectorAll(".btn_silder");
+const color = document.querySelectorAll(".color_list");
+const displayElment = document.getElementById("color_name");
+const sold_out = document.querySelector(".sold_out");
+const cart_text = document.querySelector(".add_to_cart");
+const lable_stock = document.querySelector(".lable_stock");
+const process = document.querySelector(".process_body");
+const wrapper = document.querySelector(".slider_wrapper");
+
+const dots = document.querySelectorAll(".dot_pagination");
+
 function increase() {
   let plus = document.getElementsByClassName("input_number")[0];
 
@@ -18,7 +32,6 @@ window.onscroll = function () {
 };
 
 function testscroll() {
-  const wrapper = document.querySelector(".slider_wrapper");
   const wrapperRect = wrapper.getBoundingClientRect();
 
   if (wrapperRect.top < window.innerHeight && wrapperRect.bottom > 0) {
@@ -57,26 +70,8 @@ document.addEventListener("DOMContentLoaded", function () {
     el.addEventListener("click", activestock);
   });
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".btn_silder").forEach((el) => {
-    el.addEventListener("click", active_border);
-  });
-});
-
-function active_border(event) {
-  const img = document.querySelectorAll(".btn_silder");
-  if (img) {
-    img.forEach((element, i) => {
-      element.classList.remove("active_img");
-    });
-  }
-  event.currentTarget.classList.add("active_img");
-}
-
 function activestock(event) {
   const color = document.querySelectorAll(".color_list");
-
   if (color) {
     color.forEach((element, i) => {
       element.classList.remove("active_color");
@@ -84,15 +79,7 @@ function activestock(event) {
   }
   event.currentTarget.classList.add("active_color");
 
-  // event.currentTarget.classList.add("active_img")
-
   const selectedColor = event.currentTarget.getAttribute("data-color");
-  const displayElment = document.getElementById("color_name");
-  const sold_out = document.querySelector(".sold_out");
-  const cart_text = document.querySelector(".add_to_cart");
-  const lable_stock = document.querySelector(".lable_stock");
-  const process = document.querySelector(".process_body");
-
   if (displayElment) {
     if (selectedColor === "Blue" || selectedColor === "Sliver") {
       sold_out.classList.add("active_text");
@@ -110,6 +97,26 @@ function activestock(event) {
   } else {
     console.log("không thấy");
   }
+
+
+  
+color.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    // Tính vị trí cần scroll đến
+    const scrollX = mainImgs[index].offsetLeft;
+
+    // Cuộn container đến ảnh tương ứng
+    mainImgContainer.scrollTo({
+      left: scrollX,
+      behavior: "smooth",
+    });
+
+    // Cập nhật class active
+    color.forEach((b) => b.classList.remove("active_color"));
+    btn.classList.add("active_color");
+  });
+});
+
 }
 
 // open model
@@ -132,14 +139,10 @@ function close_zoom() {
 }
 //active ảnh
 
-const mainImgContainer = document.querySelector(".main_img");
-const mainImgs = document.querySelectorAll(".main_img_orther");
-const btnSilders = document.querySelectorAll(".btn_silder");
-
 mainImgContainer.addEventListener("scroll", () => {
   let closestIndex = 0;
   let minDistance = Infinity;
-// thuật toán nhỏ nhất
+  // thuật toán nhỏ nhất
   mainImgs.forEach((img, index) => {
     const rect = img.getBoundingClientRect();
     const distance = Math.abs(
@@ -148,7 +151,6 @@ mainImgContainer.addEventListener("scroll", () => {
     if (distance < minDistance) {
       minDistance = distance;
       closestIndex = index;
-      console.log(closestIndex  )
     }
   });
 
@@ -187,7 +189,10 @@ btnSilders.forEach((btn, index) => {
     btn.classList.add("active_img");
   });
 });
-const dots = document.querySelectorAll(".dot_pagination");
+
+
+
+
 dots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
     const scrollX = mainImgs[index].offsetLeft;
@@ -202,33 +207,81 @@ dots.forEach((dot, index) => {
   });
 });
 
+const endTime = new Date().getTime() + 3 * 24 * 60 * 60 * 1000;
+const check = new Date().toLocaleDateString();
+console.log(check);
+function updateCountdown() {
+  const now = new Date().getTime();
+  let timeLeft = Math.max(endTime - now, 0);
 
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+  const seconds = Math.floor((timeLeft / 1000) % 60);
 
- const endTime = new Date().getTime() + 3 * 24 * 60 * 60 * 1000;
+  // Tách từng số hàng chục và hàng đơn vị
+  document.getElementById("day1").textContent = Math.floor(days / 10);
+  document.getElementById("day2").textContent = days % 10;
 
-  function updateCountdown() {
-    const now = new Date().getTime();
-    let timeLeft = Math.max(endTime - now, 0);
+  document.getElementById("hour1").textContent = Math.floor(hours / 10);
+  document.getElementById("hour2").textContent = hours % 10;
 
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
-    const seconds = Math.floor((timeLeft / 1000) % 60);
+  document.getElementById("min1").textContent = Math.floor(minutes / 10);
+  document.getElementById("min2").textContent = minutes % 10;
 
-    // Tách từng số hàng chục và hàng đơn vị
-    document.getElementById("day1").textContent = Math.floor(days / 10);
-    document.getElementById("day2").textContent = days % 10;
+  document.getElementById("sec1").textContent = Math.floor(seconds / 10);
+  document.getElementById("sec2").textContent = seconds % 10;
+}
 
-    document.getElementById("hour1").textContent = Math.floor(hours / 10);
-    document.getElementById("hour2").textContent = hours % 10;
+// Cập nhật mỗi giây
+updateCountdown();
+setInterval(updateCountdown, 1000);
 
-    document.getElementById("min1").textContent = Math.floor(minutes / 10);
-    document.getElementById("min2").textContent = minutes % 10;
+const main_img_detail = document.querySelector(".slider_img");
+const main_img_detail_orther = document.querySelectorAll(".slider_img_item");
+const btn_prev = document.querySelector(".pagination_item.prev");
+const btn_next = document.querySelector(".pagination_item.next");
+const number_item = document.querySelector(".pagination_item.per");
+let currentIndex = 0; // Biến lưu vị trí hiện tại
 
-    document.getElementById("sec1").textContent = Math.floor(seconds / 10);
-    document.getElementById("sec2").textContent = seconds % 10;
+function scrollToIndex(index) {
+  if (index >= 0 && index < main_img_detail_orther.length) {
+    const scrollX = main_img_detail_orther[index].offsetLeft;
+    main_img_detail.scrollTo({
+      left: scrollX,
+      behavior: "smooth",
+    });
+    currentIndex = index;
+    number_item.innerHTML = currentIndex + 1 + " / 6";
   }
+}
 
-  // Cập nhật mỗi giây
-  updateCountdown();
-  setInterval(updateCountdown, 1000); 
+// Khi scroll: cập nhật lại currentIndex gần nhất
+main_img_detail.addEventListener("scroll", () => {
+  let closestIndex = 0;
+  let minDistance = Infinity;
+
+  main_img_detail_orther.forEach((img, index) => {
+    const rect = img.getBoundingClientRect();
+    const distance = Math.abs(
+      rect.left - mainImgContainer.getBoundingClientRect().left
+    );
+    if (distance < minDistance) {
+      minDistance = distance;
+      closestIndex = index;
+    }
+  });
+
+  currentIndex = closestIndex;
+  number_item.innerHTML = currentIndex + 1 + "/6";
+});
+
+// Xử lý nút prev
+btn_prev.addEventListener("click", () => {
+  scrollToIndex(currentIndex - 1);
+});
+
+// Xử lý nút next
+btn_next.addEventListener("click", () => {
+  scrollToIndex(currentIndex + 1);
+});
